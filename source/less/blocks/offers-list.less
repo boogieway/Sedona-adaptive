@@ -1,0 +1,189 @@
+.offers-list {
+  .list-reset;
+  padding-top: 36px;
+}
+
+.offers-list__item {
+  padding-bottom: 30px;
+  padding-left: 70px;
+  .text-styles(14px);
+
+  &--food {
+    padding-bottom: 38px;
+  }
+}
+
+.offers-list__title {
+  display: inline-block;
+  .text-styles(18px);
+  font-weight: bold;
+  padding-right: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.offers-list__icon {
+  position: absolute;
+  fill: @blue;
+
+  &--house {
+    left: -50px;
+    top: -10px;
+  }
+
+  &--gifts {
+    left: -46px;
+    top: -13px;
+  }
+
+  &--food {
+    left: -50px;
+    top: -6px;
+  }
+}
+
+.offers-list__text {
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+}
+
+.offers-list__nochinese {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .offers-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 158px;
+    padding-bottom: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .offers-list__item {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    &--houses {
+      order: 1;
+      box-sizing: border-box;
+    }
+
+    &--gifts {
+      order: 3;
+      box-sizing: border-box;
+    }
+
+    &--food {
+      order: 2;
+      box-sizing: border-box;
+    }
+  }
+
+  .offers-list__title {
+    .text-styles(21px);
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .offers-list__icon {
+    &--house {
+      .size(75px, 72px);
+      left: 0;
+      top: -98px;
+    }
+
+    &--gifts {
+      .size(64px, 75px);
+      left: 20px;
+      top: -100px;
+    }
+
+    &--food {
+      .size(77px, 68px);
+      left: -20px;
+      top: -98px;
+    }
+  }
+
+  .offers-list__text {
+    &--houses {
+      min-width: 261px;
+      padding-left: 46px;
+      padding-right: 50px;
+      box-sizing: border-box;
+    }
+
+    &--gifts {
+      min-width: 255px;
+      padding-left: 44px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+
+    &--food {
+      min-width: 252px;
+      padding-left: 48px;
+      padding-right: 52px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offers-list {
+    padding-bottom: 83px;
+  }
+
+  .offers-list__item {
+    padding: 0;
+    margin: 0;
+
+    &--gifts {
+      order: 3;
+    }
+
+    &--food {
+      order: 2;
+    }
+  }
+
+  .offers-list__title {
+    &--food {
+      padding-right: 14px;
+    }
+
+    &--gifts {
+      padding-right: 21px;
+    }
+  }
+
+  .offers-list__text {
+    &--houses {
+      min-width: 392px;
+      padding-left: 69px;
+      padding-right: 68px;
+    }
+
+    &--gifts {
+      min-width: 383px;
+      padding-left: 72px;
+      padding-right: 94px;
+    }
+
+    &--food {
+      min-width: 425px;
+      padding-left: 64px;
+      padding-right: 76px;
+    }
+  }
+
+  .offers-list__nochinese {
+    display: inline-block;
+  }
+}

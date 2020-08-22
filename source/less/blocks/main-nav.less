@@ -1,0 +1,161 @@
+.main-nav {
+  width: auto;
+  margin: 0;
+  position: relative;
+}
+
+.main-nav__menu {
+  height: 56px;
+  text-align: center;
+}
+
+.main-nav__toggle {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  .size(23px, 22px);
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 18px;
+  right: 17px;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav__list {
+  .list-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__link {
+  display: block;
+  .link-button(14px, 14px, @blue);
+  padding-right: 4px;
+  .text-styles(18px, @white);
+  line-height: 26px;
+  border-top: 1px solid rgb(154, 194, 219);
+  border-bottom: 1px solid @darkblue;
+  position: relative;
+
+  &:hover {
+    background-color: rgb(102, 158, 192);
+  }
+
+  &:focus,
+  &:active {
+    background-color: rgb(84, 150, 189);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: rgb(229, 229, 229);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    flex-direction: row;
+  }
+
+  .main-nav__item {
+    flex-basis: 25%;
+
+    &--photos {
+      margin-right: 10%;
+    }
+
+    &--form {
+      margin-left: 10%;
+    }
+  }
+
+  .main-nav__link {
+    background-color: @white;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .text-styles(14px, @black);
+    font-weight: bold;
+    border: none;
+
+    &:hover {
+      background-color: @white;
+      color: rgb(129, 179, 210);
+    }
+
+    &:focus,
+    &:active {
+      background-color: @white;
+      color: rgb(178, 178, 178);
+    }
+
+    &--active {
+      color: rgb(130, 112, 101);
+
+      &:hover {
+        background-color: @white;
+        color: rgb(117, 101, 91);
+      }
+
+      &:focus,
+      &:active {
+        background-color: @white;
+        color: rgb(215, 210, 207);
+      }
+    }
+  }
+
+  .main-nav__menu {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    margin-right: 50%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .main-nav__menu {
+    right: -92px;
+  }
+
+  .main-nav__image {
+    display: block;
+    .size(188px, 96px);
+  }
+}

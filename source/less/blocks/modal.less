@@ -1,0 +1,145 @@
+.modal {
+  position: fixed;
+  z-index: 20;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal--error {
+  top: 130px;
+  width: 100%;
+  display: none;
+}
+
+.modal--right {
+  top: 130px;
+  width: 100%;
+  display: none;
+}
+
+.modal__wrapper {
+  width: 344px;
+  background-color: @white;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 46px;
+  padding-left: 56px;
+  padding-right: 57px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.15);
+
+  &--right {
+    padding: 0;
+    padding-top: 49px;
+  }
+}
+
+.modal__title {
+  .text-styles(18px, @black);
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+}
+
+.modal__announce {
+  .text-styles(14px, @black);
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+
+  &--right {
+    padding-left: 52px;
+    padding-right: 54px;
+    padding-bottom: 35px;
+  }
+}
+
+.modal__close {
+  width: 100%;
+  background-color: rgb(242, 242, 242);
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.modal__button {
+  .link-button(18px, 18px, @blue);
+  .text-styles(18px, @white);
+  font-weight: bold;
+  padding-left: 78px;
+  padding-right: 79px;
+  border: none;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: rgb(102, 158, 192);
+    outline: 0;
+  }
+
+  &:active {
+    background-color: rgb(84, 150, 189);
+    color: rgba(255, 255, 255, 0.3);
+    outline: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal__wrapper {
+    width: 424px;
+    padding-top: 64px;
+    padding-left: 61px;
+    padding-right: 62px;
+    padding-bottom: 49px;
+
+    &--right {
+      width: 664px;
+      padding: 0;
+      padding-top: 64px;
+    }
+  }
+
+  .modal__title {
+    font-size: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 35px;
+  }
+
+  .modal__announce {
+    padding-bottom: 39px;
+
+    &--right {
+      padding-left: 112px;
+      padding-right: 114px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .modal__button {
+    padding-left: 122px;
+    padding-right: 123px;
+
+    &--close {
+      padding-left: 154px;
+      padding-right: 155px;
+    }
+  }
+
+  .modal__close {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal--error {
+    width: @desktop-width;
+  }
+
+  .modal--right {
+    width: @desktop-width;
+  }
+}

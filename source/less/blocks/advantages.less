@@ -1,0 +1,391 @@
+.advantages {
+  padding-top: 40px;
+}
+
+.advantages__title {
+  font-size: 18px;
+  margin: 0;
+  line-height: 26px;
+}
+
+.advantages__title--main {
+  .text-styles(18px);
+  line-height: 26px;
+  padding-left: 32px;
+  padding-right: 33px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.advantages__anounce {
+  .text-styles(14px, @black);
+  line-height: 26px;
+  margin: 0;
+  margin-top: 27px;
+  padding-left: 32px;
+  padding-right: 33px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.advantages__list {
+  .list-reset;
+  position: relative;
+}
+
+.advantages__wrapper {
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  .text-styles(14px);
+  text-align: center;
+
+  &--town {
+    background-color: @blue;
+    .text-styles(14px, @white);
+    padding-top: 78px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      .alter;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 37px;
+      background-image: url("../img/bg-triangle.svg");
+      background-position: center 0;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+  }
+
+  &--bridge {
+    background-color: @blue;
+    .text-styles(14px, @white);
+    padding-top: 40px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+  }
+
+  &--area {
+    padding-top: 28px;
+    padding-right: 41px;
+    padding-left: 41px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+  }
+
+  &--road {
+    padding-top: 26px;
+    padding-right: 57px;
+    padding-left: 56px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+  }
+
+  &--tourists {
+    padding-top: 26px;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+  }
+}
+
+.advantages__number {
+  display: inline-block;
+  padding-top: 9px;
+  padding-bottom: 19px;
+}
+
+.advantages__description {
+  margin: 0;
+  position: relative;
+  line-height: 21px;
+
+  &--town {
+    padding-right: 28px;
+    padding-left: 27px;
+  }
+
+  &--bridge {
+    padding-left: 30px;
+    padding-right: 31px;
+  }
+
+  &--area::after,
+  &--road::after {
+    .alter;
+    bottom: -27px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(214, 214, 214);
+  }
+}
+
+.advantages__container {
+  width: 320px;
+  height: 260px;
+  margin: 0 auto;
+  background-color: @yellow;
+  overflow: hidden;
+}
+
+.advantages__picture--bridge {
+  margin-left: -100px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding-top: 51px;
+  }
+
+  .advantages__title {
+    .text-styles(21px, white);
+
+    &--main {
+      padding-left: 139px;
+      padding-right: 139px;
+      .text-styles(21px, @black);
+    }
+
+    &--town {
+      padding-left: 48px;
+      padding-right: 44px;
+    }
+
+    &--bridge {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+  }
+
+  .advantages__anounce {
+    padding-left: 129px;
+    padding-right: 129px;
+    padding-bottom: 45px;
+    line-height: 26px;
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--bridge {
+      display: flex;
+    }
+
+    &--wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .advantages__wrapper {
+    min-height: 256px;
+
+    &--town {
+      flex-basis: 33.4%;
+      height: 256px;
+      padding: 0;
+      padding-top: 45px;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--bridge {
+      flex-basis: 33.4%;
+      height: 256px;
+      padding: 0;
+      padding-top: 43px;
+      box-sizing: border-box;
+      order: 1;
+      overflow: hidden;
+    }
+
+    &--area {
+      min-width: 256px;
+      padding: 0;
+      padding-top: 45px;
+      padding-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    &--road {
+      min-width: 256px;
+      padding: 0;
+      padding-top: 45px;
+      padding-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    &--tourists {
+      min-width: 256px;
+      padding: 0;
+      padding-top: 45px;
+      padding-bottom: 15px;
+      box-sizing: border-box;
+    }
+  }
+
+  .advantages__number {
+    padding-bottom: 27px;
+  }
+
+  .advantages__description {
+    &--town {
+      padding-left: 47px;
+      padding-right: 39px;
+      line-height: 21px;
+    }
+
+    &--bridge {
+      padding-left: 30px;
+      padding-right: 31px;
+      line-height: 21px;
+    }
+
+    &--area {
+      padding-left: 49px;
+      padding-right: 48px;
+    }
+
+    &--road {
+      padding-left: 54px;
+      padding-right: 56px;
+    }
+
+    &--tourists {
+      padding-left: 54px;
+      padding-right: 53px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__container {
+    margin: 0 auto;
+    flex-grow: 1;
+    height: 256px;
+  }
+
+  .advantages__picture {
+    width: 100%;
+
+    &--bridge {
+      margin-left: 0;
+    }
+  }
+
+
+  .advantages__title--sub {
+    width: 160px;
+    margin: 0 auto;
+    color: @black;
+  }
+}
+
+@media (min-width: @tablet-width-only) {
+  .advantages__title--sub {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .advantages__title {
+    &--main {
+      padding-left: 353px;
+      padding-right: 357px;
+    }
+
+    &--town {
+      width: 200px;
+      margin: 0 auto;
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &--bridge {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+
+    &--sub {
+      width: 160px;
+    }
+  }
+
+  .advantages__wrapper {
+    margin: 0;
+
+    &--town {
+      padding: 0;
+      padding-top: 53px;
+      padding-bottom: 56px;
+    }
+
+    &--bridge {
+      padding: 0;
+      padding-top: 54px;
+    }
+
+    &--area {
+      width: 400px;
+      padding: 0;
+      padding-top: 44px;
+      padding-left: 7px;
+      padding-right: 10px;
+    }
+
+    &--road {
+      width: 400px;
+      padding: 0;
+      padding-top: 44px;
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+
+    &--tourists {
+      width: 400px;
+      padding: 0;
+      padding-top: 44px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .advantages__description {
+    &--town {
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &--bridge {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+  }
+
+  .advantages__container {
+    overflow: hidden;
+  }
+
+  .advantages__picture {
+    margin-top: -76px;
+  }
+}
